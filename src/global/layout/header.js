@@ -1,22 +1,27 @@
 import React from 'react'
 import logo from '../../assets/Logo.png'
 import search from'../../assets/search-outline.png'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
   return (
     <header>
         <div className="page_width">
+        
           <nav>
+          <div className="bar_icon">
+          <FaBars />
+          </div>
             <div className="logo">
               <img src={logo} alt="logo" />
             </div>
             <div className="nav_link">
               <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="blogListing">Blog</a></li>
-                <li><a href="singlePost">Single Post</a></li>
-                <li><a href="/authorPage">Contact</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="blogListing">Blog</Link></li>
+                <li><Link to="singlePost">Single Post</Link></li>
+                <li><Link to="/authorPage">Contact</Link></li>
               </ul>
             </div>
             <div className="nav-search">
